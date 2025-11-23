@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirjaudu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Kirjaudu sisään</h2>
+
+        <form action="http://localhost:3000/login" method="POST">
+            <label for="username">Käyttäjänimi</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Salasana</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Kirjaudu</button>
+        </form>
+
+    </div>
+
+</body>
+</html
