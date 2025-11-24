@@ -1,21 +1,18 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+require('dotenv').config();
 const bcrypt = require("bcryptjs");
-const cors = require("cors");
+
 
 const app = express();
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // yhteys mongoDB
-mongoose.connect(
-  "mongodb+srv://niemelanriku_db_user:mongo123@cluster0.zse51zn.mongodb.net/kayttajat?appName=Cluster0",
-
-)
-.then(() => console.log("Yhdistäminen onnistui"))
-.catch(err => console.log("Virhe:", err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("Yhteys muodostettu tietokantaan"))
+  .catch(err => console.error("Virhe tietokantayhteydessä:", err));
 
 
 
@@ -33,7 +30,7 @@ app.post("/register", async (req, res) => {
   const user = new User({
     username,
     password: hashedPassword,
-  });
+  });n
 
   await user.save();
   res.send("Käyttäjä rekisteröity!");
