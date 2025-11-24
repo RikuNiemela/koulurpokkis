@@ -16,7 +16,7 @@ body {
     background: white;
     padding: 25px;
     border-radius: 10px;
-    width: 300px;
+    width: 360px;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
     text-align: center;
 }
@@ -29,7 +29,7 @@ h2 {
 
 
 input {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     margin-top: 8px;
     border: 1px solid #ccc;
@@ -37,7 +37,7 @@ input {
     font-size: 16px;
 }
 
-/* Labelit */
+
 label {
     display: block;
     text-align: left;
@@ -56,7 +56,6 @@ button {
     font-size: 16px;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.25s ease;
 }
 
 button:hover {
@@ -84,3 +83,5 @@ a {
         font-size: 15px;
     }
 }
+
+
