@@ -46,9 +46,9 @@ app.post("/register", async (req, res) => {
 
 // kirjautuminen
 app.post("/login", async (req, res) => {
-  // haetan käyttäjätunnis ja salasana
+  // haetaan käyttäjätunnus ja salasana
   const { username, password } = req.body;
-  // Etsitään tietokannasta käyttäjö
+  // Etsitään tietokannasta käyttäjä
   const user = await User.findOne({ username });
   // Jos käyttäjää ei löydy lähetetään virheviesti
   if (!user) return res.send("Käyttäjää ei löydy!");
@@ -62,3 +62,4 @@ app.post("/login", async (req, res) => {
 
 // palvelimen käynnistys 
 app.listen(3000, () => console.log("Palvelin käynnissä"));
+
